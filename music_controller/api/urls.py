@@ -9,5 +9,5 @@ router.register(r'music', RoomView)
 
 
 urlpatterns = [
-    path('home/', include(router.urls)),
+    path('', include(router.urls)),
 ]
