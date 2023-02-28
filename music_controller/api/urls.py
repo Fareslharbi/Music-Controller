@@ -1,13 +1,7 @@
-from django.urls import include, path
-from .views import RoomView
-from rest_framework import routers
-
-
-router = routers.DefaultRouter()
-router.register(r'music', RoomView)
-
-
+from django.urls import path
+from .views import RoomView, CreateRoomView
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('room', RoomView.as_view()),
+    path('create-room', CreateRoomView.as_view())
 ]
